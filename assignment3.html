@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+
+    <style>
+        body {
+            background: linear-gradient(to bottom, #FFC0CB, #FFFFFF);
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table td,
+        table th {
+
+            padding: 8px;
+        }
+
+        .player-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #ccc;
+            position: relative;
+        }
+
+        .progress-bar .progress {
+            height: 100%;
+            background-color: #4CAF50;
+            width: 0;
+        }
+
+        .assignment-cell {
+            width: 300px;
+            height: 200px;
+            text-align: center;
+            background-color: transparent;
+            transition: background-color 0.3s;
+        }
+
+        .assignment-cell:hover {
+            background: linear-gradient(to bottom, rgb(240, 128, 171), rgb(230, 183, 199));
+        }
+
+        .assignment-cell a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-decoration: none;
+            color: #000;
+            font-size: 24px;
+        }
+
+        .assignment-cell.active {
+            background-color: pink;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <p>&nbsp;</p>
+    <div class="container">
+        <table style="width: 1000px; height: 1000px;">
+            <tbody>
+                <tr>
+                    <td style="width: 896px;" colspan="3">
+                        <h1 style="text-align: center;">MY MUSIC WORLD!</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 284.422px; text-align: center;">
+                        <div class="assignment-cell">
+                            <a href="index.html">Assignment 2</a>
+                        </div>
+                    </td>
+                    <td style="width: 340.578px; text-align: center;">
+                        <div class="assignment-cell">
+                            <a href="index.html">Assignment 3</a>
+                        </div>
+                    </td>
+                    <td style="width: 271px; text-align: center;">
+                        <div class="assignment-cell">
+                            <a href="index.html">Assignment 5</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 284.422px;">&nbsp;</td>
+                    <td style="width: 340.578px;">&nbsp;</td>
+                    <td style="width: 271px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="width: 284.422px;">&nbsp;</td>
+                    <td style="width: 340.578px;">&nbsp;</td>
+                    <td style="width: 271px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="width: 284.422px;">&nbsp;</td>
+                    <td style="width: 340.578px; text-align: center;">Song made by&nbsp; Brain Cheng</td>
+                    <td style="width: 271px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="width: 284.422px;">&nbsp;</td>
+                    <td style="width: 340.578px; text-align: center;" rowspan="4"><img src="images/grape.jpg" alt="" />
+                    </td>
+                    <td style="width: 271px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="width: 284.422px;">&nbsp;</td>
+                    <td style="width: 271px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="width: 284.422px;">&nbsp;</td>
+                    <td style="width: 271px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="width: 284.422px;">&nbsp;</td>
+                    <td style="width: 271px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="width: 284.422px;">&nbsp;</td>
+                    <td style="width: 340.578px; text-align: center;">Image reference: <a
+                            href="https://p2.music.126.net/G6tgDj7CeEYqEZ0OS6BKsw==/109951169045246656.jpg?param=177y177">Here</a>
+                    </td>
+                    <td style="width: 271px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="width: 284.422px;">&nbsp;</td>
+                    <td style="width: 340.578px; align-items: center;">
+                        <div class="player-container">
+                            <audio id="audio-player" style="display: block; margin-left: auto; margin-right: auto;"
+                                src="music/Brian Cheng - Grapes.mp3"></audio>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+
+
+
+                        </div>
+                    </td>
+                    <td style="width: 271px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="width: 284.422px;">&nbsp;</td>
+                    <td style="width: 340.578px; text-align: center;">
+                        <div class="player-controls"
+                            style="display: flex; justify-content: center; align-items: center;">
+                            <button onclick="play()" style="margin-right: 25%;">Play</button>
+                            <button onclick="pause()" style="margin-right: 25%;">Pause</button>
+                            <button onclick="stop()">Stop</button>
+                        </div>
+                    </td>
+
+
+                    <td style="width: 271px;">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        var audioPlayer = document.getElementById('audio-player');
+        var progressBar = document.querySelector('.progress');
+
+        audioPlayer.addEventListener('timeupdate', updateProgressBar);
+
+        function updateProgressBar() {
+            var progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+            progressBar.style.width = progress + '%';
+        }
+
+        function play() {
+            audioPlayer.play();
+        }
+
+        function pause() {
+            audioPlayer.pause();
+        }
+
+        function stop() {
+            audioPlayer.pause();
+            audioPlayer.currentTime = 0;
+        }
+    </script>
+</body>
+
+</html>
