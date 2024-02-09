@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4545a1c2-5daf-409e-befa-b62c278d5193" name="Changes" comment="first" />
+    <list default="true" id="4545a1c2-5daf-409e-befa-b62c278d5193" name="Changes" comment="first">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +25,7 @@
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
         <option name="accountId" value="666d4386-5143-485a-aeca-2621b2e04ef4" />
-        <option name="url" value="https://github.com/YanwenWang1125/yanwenwang1125.github.io.git" />
+        <option name="url" value="https://github.com/ohsofanta/ohsofanta.github.io.git" />
       </UrlAndAccount>
     </option>
   </component>
@@ -66,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1707285510082</updated>
-      <workItem from="1707285511413" duration="2147000" />
+      <workItem from="1707285511413" duration="3299000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <option name="closed" value="true" />
@@ -84,7 +86,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707287244704</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="first">
+      <option name="closed" value="true" />
+      <created>1707288169147</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707288169147</updated>
+    </task>
+    <task id="LOCAL-00004" summary="first">
+      <option name="closed" value="true" />
+      <created>1707288289583</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707288289583</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,7 +113,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
