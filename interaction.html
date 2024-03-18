@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Interaction</title>
+
+    <style>
+        body {
+            /* background: linear-gradient(to bottom, #FFC0CB, #FFFFFF); */
+        }
+
+        .container {
+            /* height: 100vh; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #FFC0CB, #FFFFFF);
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table td,
+        table th {
+
+            padding: 8px;
+        }
+
+        .player-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #ccc;
+            position: relative;
+        }
+
+        .progress-bar .progress {
+            height: 100%;
+            background-color: #4CAF50;
+            width: 0;
+        }
+
+        .assignment-cell {
+            width: 300px;
+            height: 200px;
+            text-align: center;
+            background-color: transparent;
+            transition: background-color 0.3s;
+        }
+
+        .assignment-cell:hover {
+            background: linear-gradient(to bottom, rgb(240, 128, 171), rgb(230, 183, 199));
+        }
+
+        .assignment-cell a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-decoration: none;
+            color: #000;
+            font-size: 24px;
+        }
+
+        .assignment-cell.active {
+            background-color: pink;
+        }
+
+        .banner {
+            background-image: url('images/banner.png');
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            position: flex;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            table-layout: flex;
+           
+            border-collapse: collapse;
+           
+        }
+
+        td {
+            text-align: center;
+    
+            vertical-align: middle;
+
+            padding: 10px;
+
+        }
+
+        .music-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+            transition: background-color 0.3s, transform 0.2s;
+
+        }
+
+        .music-btn:hover {
+            background-color: plum;
+        }
+
+        .music-btn:active {
+            transform: scale(0.98);
+
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <table style="width: 1000px;">
+            <tbody>
+                <tr style="height: 7.39062px;">
+                    <td style="width: 896px; height: 7.39062px;" colspan="3">
+                        <h1 style="display: flex; justify-content: center; align-items: center; height: 200px;"><img
+                                style="max-height: 100%; max-width: 100%; " src="images/banner.png"
+                                alt="" /></h1>
+                    </td>
+                </tr>
+              
+                <tr style="height: 184px;">
+                    <td style="width: 896px; height: 36px;" colspan="5">
+                        <h1 style="text-align: center; ">Weilin's MUSIC WORLD!</h1>
+                    </td>
+                </tr>
+                <tr style="height: 49px;">
+                    <td style="width: 284.422px; text-align: center; height: 49px;">
+                        <div class="assignment-cell"><a href="index.html"><span style="color: #000000;">Music
+                                    History</span></a></div>
+                    </td>
+                    <td style="width: 340.578px; text-align: center; height: 49px;">
+                        <div class="assignment-cell"><a href="interaction.html"><span
+                                    style="color: #000000;">Music&nbsp;Interaction</span></a></div>
+                    </td>
+                    <td style="width: 271px; text-align: center; height: 49px;">
+                        <div class="assignment-cell"><a href="instrument.html"><span style="color: #000000;">Instrument
+                                    Introduce</span></a></div>
+                    </td>
+                </tr>
+                
+            
+                <tr style="height: 49px;">
+                    <td style="width: 284.422px; height: 49px; text-align: center;" colspan="3">
+                        <p>To get started, check out the boxes below. Each one contains a small piece of music. Click a
+                            box to turn it on or off.</p>
+                        <p>For Example, you could try:</p>
+                        <p>4 2 6</p>
+                        <p>1 2 9</p>
+                        <p>7 2</p>
+                        <p>8 9</p>
+                        <p>4 5</p>
+                        <p>5 3</p>
+                    </td>
+                </tr>
+                <tr style="height: 49px;">
+                    <td style="width: 284.422px; height: 49px; text-align: center;">Drums</td>
+                    <td style="width: 340.578px; text-align: center; height: 49px;">Bass</td>
+                    <td style="width: 271px; height: 49px; text-align: center;">Melodies</td>
+                </tr>
+                
+                <tr>
+                    <td><button class="music-btn" onclick="toggleMusic('audio1')">Play Drum 1 </button></td>
+                    <td><button class="music-btn" onclick="toggleMusic('audio2')">Play Bass 2</button></td>
+                    <td><button class="music-btn" onclick="toggleMusic('audio3')">Play Melody 3</button></td>
+                </tr>
+                <tr>
+                    <td><button class="music-btn" onclick="toggleMusic('audio4')">Play Drum 4</button></td>
+                    <td><button class="music-btn" onclick="toggleMusic('audio5')">Play Bass 5</button></td>
+                    <td><button class="music-btn" onclick="toggleMusic('audio6')">Play Melody 6</button></td>
+                </tr>
+                <tr>
+                    <td><button class="music-btn" onclick="toggleMusic('audio7')">Play Drum 7</button></td>
+                    <td><button class="music-btn" onclick="toggleMusic('audio8')">Play Bass 8</button></td>
+                    <td><button class="music-btn" onclick="toggleMusic('audio9')">Play Melody 9</button></td>
+                </tr>
+
+                <tr style="height: 49px;">
+                    <td style="width: 284.422px; height: 49px;">&nbsp;</td>
+                    <td style="width: 340.578px; height: 49px;">&nbsp;</td>
+                    <td style="width: 271px; height: 49px;">&nbsp;</td>
+                </tr>
+
+                <tr style="height: 49px;">
+                    <td style="width: 284.422px; height: 49px;">&nbsp;</td>
+                    <td style="width: 340.578px; height: 49px;">&nbsp;</td>
+                    <td style="width: 271px; height: 49px;">&nbsp;</td>
+                </tr>
+        
+                </tbody>
+
+
+
+       
+        <audio id="audio1" src="music/d1.wav"></audio>
+        <audio id="audio2" src="music/b1.mp3"></audio>
+        <audio id="audio3" src="music/m1.wav"></audio>
+        <audio id="audio4" src="music/d2.wav"></audio>
+        <audio id="audio5" src="music/b2.wav"></audio>
+        <audio id="audio6" src="music/m2.wav"></audio>
+        <audio id="audio7" src="music/d3.mp3"></audio>
+        <audio id="audio8" src="music/b3.wav"></audio>
+        <audio id="audio9" src="music/m3.wav"></audio>
+    </div>
+
+
+    <script src="interaction1.js"></script>
+
+
+</body>
+
+</html>

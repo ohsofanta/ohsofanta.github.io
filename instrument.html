@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrument Introduce</title>
+
+    <style>
+        .container {
+            /* height: 100vh; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #FFC0CB, #FFFFFF);
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table td,
+        table th {
+
+            padding: 8px;
+        }
+
+        .player-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #ccc;
+            position: relative;
+        }
+
+        .progress-bar .progress {
+            height: 100%;
+            background-color: #4CAF50;
+            width: 0;
+        }
+
+        .assignment-cell {
+            width: 300px;
+            height: 200px;
+            text-align: center;
+            background-color: transparent;
+            transition: background-color 0.3s;
+        }
+
+        .assignment-cell:hover {
+            background: linear-gradient(to bottom, rgb(240, 128, 171), rgb(230, 183, 199));
+        }
+
+        .assignment-cell a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-decoration: none;
+            color: #000;
+            font-size: 24px;
+        }
+
+        .assignment-cell.active {
+            background-color: pink;
+        }
+
+        .banner {
+            background-image: url('images/banner.png');
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            position: flex;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+
+        .play-image {
+            width: 100px;
+
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .play-image:active {
+            transform: scale(0.9);
+
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+
+    <!-- <div class="banner">
+
+    </div> -->
+    <div class="container">
+        <table style="width: 1000px; height: 1000px;">
+            <tbody>
+                <tr style="height: 36px;">
+                    <td style="width: 896px; height: 36px;" colspan="3">&nbsp;</td>
+                </tr>
+                <tr style="height: 7.39062px;">
+                    <td style="width: 896px; height: 7.39062px;" colspan="3">
+                        <h1 style="display: flex; justify-content: center; align-items: center; height: 200px;"><img
+                                style="max-height: 100%; max-width: 100%;" src="images/banner.png" alt="" /></h1>
+                    </td>
+                </tr>
+                <tr style="height: 36px;">
+                    <td style="width: 896px; height: 36px;" colspan="3">&nbsp;</td>
+                </tr>
+                <tr style="height: 184px;">
+                    <td style="width: 896px; height: 184px;" colspan="3">
+                        <h1 style="text-align: center; ">Weilin's MUSIC WORLD!</h1>
+                    </td>
+                </tr>
+                <tr style="height: 49px;">
+                    <td style="width: 284.422px; text-align: center; height: 49px;">
+                        <div class="assignment-cell"><a href="index.html">Music History</a></div>
+                    </td>
+                    <td style="width: 340.578px; text-align: center; height: 49px;">
+                        <div class="assignment-cell"><a href="interaction.html">Music&nbsp;Interaction</a></div>
+                    </td>
+                    <td style="width: 271px; text-align: center; height: 49px;">
+                        <div class="assignment-cell"><a href="instrument.html">Instrument Introduce</a></div>
+                    </td>
+                </tr>
+                <tr style="height: 49px;">
+                    <td style="width: 284.422px; height: 49px;">&nbsp;</td>
+                    <td style="width: 271px; text-align: center; height: 49px;">
+                        Press Image to Hear the Music
+    </div>
+    </td>
+    <td style="width: 271px; height: 49px;">&nbsp;</td>
+    </tr>
+    <tr style="height: 49px;">
+        <td style="width: 284.422px; height: 49px;" colspan="3">
+            <h1 style="text-align: center;">&nbsp;<strong>&nbsp;&nbsp;Piano</strong></h1>
+        </td>
+    </tr>
+    <tr style="height: 49px;">
+        <td style="width: 284.422px; height: 49px;">&nbsp;</td>
+        <td style="width: 295px; text-align: center; height: 196px;" rowspan="4"><img src="images/piano.jpg"
+                style="width: 300px;" alt="Play Music 1" id="playImage1" class="play-image">
+            <audio id="audioTrack1" src="music/piano.wav"></audio>
+        </td>
+        <td style="width: 271px; height: 49px;">&nbsp;
+            <h4 style="text-align: center;">What is a piano in music?</h4>
+        </td>
+    </tr>
+    <tr style="height: 49px;">
+        <td style="width: 284.422px; height: 49px;">&nbsp;The piano is considered to be both a string and
+            percussion instrument. The strings are struck to produce the sound, but hammers hit the strings
+            via keys.</td>
+        <td style="width: 271px; height: 49px;">&nbsp;A piano is a musical instrument that evolved from
+            various keyboard-like and string instruments over time. The modern piano was invented by
+            Bartolomeo Cristofori and is a string and percussion instrument.</td>
+    </tr>
+    <tr style="height: 49px;">
+        <td style="width: 284.422px; height: 49px;">&nbsp;</td>
+        <td style="width: 271px; height: 49px;">&nbsp;</td>
+    </tr>
+    <tr style="height: 49px;">
+        <td style="width: 284.422px; height: 49px;">&nbsp;</td>
+        <td style="width: 340.578px; text-align: center; height: 49px;">&nbsp;</td>
+        <td style="width: 271px; height: 49px;">&nbsp;</td>
+    </tr>
+    <tr style="height: 49px;">
+        <td style="width: 284.422px; height: 49px;">&nbsp;</td>
+        <td style="width: 340.578px; text-align: center; height: 49px;">&nbsp;</td>
+        <td style="width: 271px; height: 49px;">&nbsp;</td>
+    </tr>
+    <tr style="height: 49px;">
+        <td style="width: 284.422px; height: 49px;" colspan="3">
+            <h1 style="text-align: center;">Guitar</h1>
+        </td>
+    </tr>
+    <tr style="height: 49px;">
+        <td style="width: 284.422px; height: 49px;">
+            <h4>What is a guitar in music?</h4>
+        </td>
+        <td style="width: 295px; text-align: center; height: 196px;" rowspan="4"><img src="images/guitar.jpg"
+                style="width: 300px;" alt="Play Music 2" id="playImage2" class="play-image">
+            <audio id="audioTrack2" src="music/guitar.flac"></audio>
+        </td>
+        <td style="width: 271px; height: 49px;">&nbsp;</td>
+    </tr>
+    <tr style="height: 49px;">
+        <td style="width: 284.422px; height: 49px;">&nbsp; Guitar, Plucked&nbsp;<a class="md-crosslink"
+                href="https://www.britannica.com/summary/stringed-instrument" data-show-preview="true">stringed
+                instrument</a>. It normally has six strings, a fretted
+            fingerboard, and a soundbox with a pronounced waist. It probably originated in Spain in the
+            early 16th century. By 1800 it was being strung with six single strings; 19th-century
+            innovations gave it its modern form.</td>
+        <td style="width: 271px; height: 49px;">&nbsp;Modern classical guitar technique owes much to
+            Francisco T&aacute;rrega (1852&ndash;1909), and Andr&eacute;s Segovia gave the instrument
+            prominence in the concert hall.</td>
+    </tr>
+    <tr style="height: 49px;">
+        <td style="width: 284.422px; height: 49px;">&nbsp;</td>
+        <td style="width: 284.422px; height: 49px;">&nbsp;</td>
+        <td style="width: 271px; height: 49px;">&nbsp;</td>
+    </tr>
+    <tr style="height: 49px;">
+        <td style="width: 284.422px; height: 49px;">&nbsp;</td>
+        <td style="width: 284.422px; height: 49px;">&nbsp;</td>
+        <td style="width: 271px; height: 49px;">&nbsp;</td>
+    </tr>
+    <tr style="height: 49px;">
+        <td style="width: 284.422px; height: 49px;" colspan="3">
+            <h1 style="text-align: center;"><strong>Violin</strong></h1>
+        </td>
+    </tr>
+    <tr style="height: 49px;">
+        <td style="width: 284.422px; height: 49px;">&nbsp;</td>
+        <td style="width: 295px; text-align: center; height: 196px;" rowspan="4"><img src="images/Violin.webp"
+                style="width: 300px;" alt="Play Music 3" id="playImage3" class="play-image">
+            <audio id="audioTrack3" src="music/violin.wav"></audio>
+        </td>
+        <td style="width: 271px; height: 49px;">
+            <h4>What is a violin in music?</h4>
+        </td>
+    </tr>
+    <tr style="height: 49px;">
+        <td style="width: 284.422px; height: 49px;">&nbsp; The violin is probably the best known and most
+            widely distributed&nbsp;<a class="md-crosslink autoxref"
+                href="https://www.britannica.com/art/musical-instrument" data-show-preview="true">musical
+                instrument</a>&nbsp;in the world.</td>
+        <td style="width: 271px; height: 49px;"><strong>&nbsp; </strong>Violin, bowed&nbsp;<a class="md-crosslink"
+                href="https://www.britannica.com/art/stringed-instrument" data-show-preview="true">stringed musical
+                instrument</a>&nbsp;that evolved during
+            the&nbsp;<a class="md-crosslink" href="https://www.britannica.com/event/Renaissance"
+                data-show-preview="true">Renaissance</a>&nbsp;from earlier bowed instruments: the&nbsp;<a
+                class="md-dictionary-link md-dictionary-tt-off mw"
+                href="https://www.merriam-webster.com/dictionary/medieval" data-term="medieval"
+                data-type="MW">medieval</a>&nbsp;<a class="md-crosslink" href="https://www.britannica.com/art/fiddle"
+                data-show-preview="true">fiddle</a>; its
+            16th-century Italian offshoot, the&nbsp;<em>lira da braccio</em>; and the&nbsp;<a class="md-crosslink"
+                href="https://www.britannica.com/art/rebec" data-show-preview="true">rebec</a>.&nbsp;</td>
+    </tr>
+    <tr style="height: 49px;">
+        <td style="width: 284.422px; height: 49px;">&nbsp;</td>
+        <td style="width: 271px; height: 49px;">&nbsp;</td>
+    </tr>
+    <tr style="height: 49px;">
+        <td style="width: 284.422px; height: 49px;">&nbsp;</td>
+        <td style="width: 284.422px; height: 49px;">&nbsp;</td>
+        <td style="width: 271px; height: 49px;">&nbsp;</td>
+    </tr>
+    <tr style="height: 49px;">
+        <td style="width: 284.422px; height: 49px;">&nbsp;</td>
+        <td style="width: 284.422px; height: 49px;">&nbsp;</td>
+        <td style="width: 271px; height: 49px;">&nbsp;</td>
+    </tr>
+    <tr style="height: 49px;">
+        <td style="width: 284.422px; height: 49px;" colspan="3">
+            <h1 style="text-align: center;">Drums</h1>
+        </td>
+    </tr>
+    <tr style="height: 49px;">
+        <td style="width: 284.422px; height: 49px;">
+            <h4>What is a drum in music?</h4>
+        </td>
+        <td style="width: 295px; text-align: center; height: 196px;" rowspan="4"><img src="images/drums.jpg"
+                style="width: 300px;" alt="Play Music 4" id="playImage4" class="play-image">
+            <audio id="audioTrack4" src="music/drum.wav"></audio>
+        </td>
+        <td style="width: 271px; height: 49px;">&nbsp;</td>
+    </tr>
+    <tr style="height: 49px;">
+        <td style="width: 284.422px; height: 49px;">As the "keeper of the rhythm," the drum provides the
+            foundation for the overall sound of music.Because a drum only has to be hit to make a sound, it
+            is also one of the simplest of the instruments.</td>
+        <td style="width: 271px; height: 49px;">&nbsp;</td>
+    </tr>
+    <tr style="height: 49px;">
+        <td style="width: 284.422px; height: 49px;">&nbsp;</td>
+        <td style="width: 271px; height: 49px;">&nbsp;</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+
+    <script src="instrument1.js"></script>
+</body>
+
+</html>
