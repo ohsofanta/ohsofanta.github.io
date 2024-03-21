@@ -174,6 +174,8 @@
                     <td style="width: 284.422px; height: 49px; text-align: center;" colspan="3">
                         <p>To get started, check out the boxes below. Each one contains a small piece of music. Click a
                             box to turn it on or off.</p>
+                        <p>Try explore with different elements available here, see how each elements can collaborate
+                            with each other.</p>
                     </td>
                 </tr>
                 <tr style="height: 49px;">
@@ -196,6 +198,14 @@
                     <td style="height: 21px; text-align: center;"><button class="music-btn">Play Bass 8</button></td>
                     <td style="height: 21px; text-align: center;"><button class="music-btn">Play Melody 9</button></td>
                 </tr>
+                <tr style="height: 21px;">
+                    <td style="height: 21px; text-align: center;"><button id="playButton1" class="music-btn">Play
+                            Combine 153</button></td>
+                    <td style="height: 21px; text-align: center;"><button id="playButton2" class="music-btn">Play
+                            Combine 429</button></td>
+                    <td style="height: 21px; text-align: center;"><button id="playButton3" class="music-btn">Play
+                            Combine 786</button></td>
+                </tr>
                 <tr style="height: 49px;">
                     <td style="width: 284.422px; height: 49px;">&nbsp;</td>
                     <td style="width: 340.578px; height: 49px;">&nbsp;</td>
@@ -215,9 +225,10 @@
                     <td style="width: 284.422px; height: 49px;">&nbsp;</td>
                     <td style="width: 340.578px; height: 245px;" rowspan="5">
                         <h1 class="text-center">Piano Play&nbsp;Simulator</h1>
+                        <p>Let's dive into the musical world with Piano Play Simulator! Unleash your creativity and play beautiful melodies with just a click.</p>
                         <div class="piano">
                             <div class="key white-key" data-note="C">C</div>
-                            <div class="key black-key" data-note="C#">C#/ Bb</div>
+                            <div class="key black-key" data-note="C#">C#/ Db</div>
                             <div class="key white-key" data-note="D">D</div>
                             <div class="key black-key" data-note="D#">D#/ Eb</div>
                             <div class="key white-key" data-note="E">E</div>
@@ -244,9 +255,7 @@
                                 Danube Waltz</button> <button class="btn btn-secondary" data-tune="traviata">Play La
                                 Traviata</button> <button class="btn btn-secondary" data-tune="valkyries">Play Ride of
                                 the Valkyries</button> <button class="btn btn-secondary" data-tune="cancan">Play
-                                Can-Can</button> <button class="btn btn-secondary" data-tune="furElise">Play F&uuml;r
-                                Elise</button> <button class="btn btn-secondary" data-tune="allaTurca">Play Alla
-                                Turca</button></div>
+                                Can-Can</button> </div>
                         <p>&nbsp;</p>
                     </td>
                     <td style="width: 271px; height: 49px;">&nbsp;</td>
@@ -427,7 +436,7 @@
                     <td style="width: 340.578px; height: 49px;">
                         <div class="piano">
                             <div class="key white-key" data-note="C">C</div>
-                            <div class="key black-key" data-note="C#">C#/ Bb</div>
+                            <div class="key black-key" data-note="C#">C#/ Db</div>
                         </div>
                     </td>
                     <td style="width: 271px; height: 49px;">&nbsp;</td>
@@ -481,7 +490,7 @@
                     <td style="width: 340.578px; height: 49px; text-align: center;">&nbsp;
                         <div class="piano">
                             <div class="key white-key" data-note="C">C</div>
-                            <div class="key black-key" data-note="C#">C#/ Bb</div>
+                            <div class="key black-key" data-note="C#">C#/ Db</div>
                             <div class="key white-key" data-note="D">D</div>
                             <div class="key black-key" data-note="D#">D#/ Eb</div>
                             <div class="key white-key" data-note="E">E</div>
@@ -505,7 +514,8 @@
                 <tr style="height: 49px;">
                     <td style="width: 284.422px; height: 49px;">&nbsp;</td>
                     <td style="width: 340.578px; height: 49px;">&nbsp;
-                        <p style="text-align: left;"><strong>Now we can <a href="#notename">go back</a> to the note naming,
+                        <p style="text-align: left;"><strong>Now we can <a href="#notename">go back</a> to the note
+                                naming,
                                 the sharp would be any note that move half step to the right. The flat would be any note
                                 that move half step to the left. Keep this in mind, if we have C, and we want to have a
                                 C flat. This is the special circumstance where flat note is no longer a black key. If C
@@ -548,22 +558,22 @@
             </tbody>
         </table>
 
-        <audio id="audio1" src="music/d1.wav"></audio>
+        <audio id="audio1" src="music/d1.mp3"></audio>
         <audio id="audio2" src="music/b1.mp3"></audio>
-        <audio id="audio3" src="music/m1.wav"></audio>
-        <audio id="audio4" src="music/d2.wav"></audio>
-        <audio id="audio5" src="music/b2.wav"></audio>
-        <audio id="audio6" src="music/m2.wav"></audio>
+        <audio id="audio3" src="music/m1.mp3"></audio>
+        <audio id="audio4" src="music/d2.mp3"></audio>
+        <audio id="audio5" src="music/b2.mp3"></audio>
+        <audio id="audio6" src="music/m2.mp3"></audio>
         <audio id="audio7" src="music/d3.mp3"></audio>
-        <audio id="audio8" src="music/b3.wav"></audio>
-        <audio id="audio9" src="music/m3.wav"></audio>
+        <audio id="audio8" src="music/b3.mp3"></audio>
+        <audio id="audio9" src="music/m3.mp3"></audio>
 
     </div>
 
 
     <script src="interaction1.js"></script>
     <script src="piano.js"></script>
-    
+
 
 
 </body>
