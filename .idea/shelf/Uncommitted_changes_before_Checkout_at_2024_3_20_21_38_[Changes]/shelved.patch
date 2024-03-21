@@ -1,0 +1,179 @@
+Index: interaction.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>Music Interaction</title>\r\n<<<<<<< HEAD\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"piano.css\">\r\n=======\r\n>>>>>>> origin/master\r\n\r\n    <style>\r\n        body {\r\n            /* background: linear-gradient(to bottom, #FFC0CB, #FFFFFF); */\r\n        }\r\n\r\n        .container {\r\n            /* height: 100vh; */\r\n            display: flex;\r\n            justify-content: center;\r\n            align-items: center;\r\n            background: linear-gradient(to bottom, #FFC0CB, #FFFFFF);\r\n        }\r\n\r\n        table {\r\n            width: 100%;\r\n        }\r\n\r\n        table td,\r\n        table th {\r\n\r\n            padding: 8px;\r\n        }\r\n\r\n        .player-container {\r\n            display: flex;\r\n            align-items: center;\r\n            justify-content: center;\r\n            height: 100%;\r\n        }\r\n\r\n        .progress-bar {\r\n            width: 100%;\r\n            height: 10px;\r\n            background-color: #ccc;\r\n            position: relative;\r\n        }\r\n\r\n        .progress-bar .progress {\r\n            height: 100%;\r\n            background-color: #4CAF50;\r\n            width: 0;\r\n        }\r\n\r\n        .assignment-cell {\r\n            width: 300px;\r\n            height: 200px;\r\n            text-align: center;\r\n            background-color: transparent;\r\n            transition: background-color 0.3s;\r\n        }\r\n\r\n        .assignment-cell:hover {\r\n            background: linear-gradient(to bottom, rgb(240, 128, 171), rgb(230, 183, 199));\r\n        }\r\n\r\n        .assignment-cell a {\r\n            display: flex;\r\n            align-items: center;\r\n            justify-content: center;\r\n            height: 100%;\r\n            text-decoration: none;\r\n            color: #000;\r\n            font-size: 24px;\r\n        }\r\n\r\n        .assignment-cell.active {\r\n            background-color: pink;\r\n        }\r\n\r\n        .banner {\r\n            background-image: url('images/banner.png');\r\n            background-size: cover;\r\n            background-position: center;\r\n            height: 200px;\r\n            color: white;\r\n            text-align: center;\r\n            line-height: 100px;\r\n            position: flex;\r\n            width: 100%;\r\n            top: 0;\r\n            left: 0;\r\n            z-index: 1000;\r\n        }\r\n\r\n\r\n        body {\r\n            font-family: Arial, sans-serif;\r\n        }\r\n\r\n        table {\r\n            width: 100%;\r\n            table-layout: flex;\r\n<<<<<<< HEAD\r\n\r\n            border-collapse: collapse;\r\n\r\n=======\r\n           \r\n            border-collapse: collapse;\r\n           \r\n>>>>>>> origin/master\r\n        }\r\n\r\n        td {\r\n            text-align: center;\r\n<<<<<<< HEAD\r\n\r\n=======\r\n    \r\n>>>>>>> origin/master\r\n            vertical-align: middle;\r\n\r\n            padding: 10px;\r\n\r\n        }\r\n\r\n        .music-btn {\r\n            padding: 10px 20px;\r\n            font-size: 16px;\r\n            color: #fff;\r\n            background-color: #007bff;\r\n            border: none;\r\n            border-radius: 5px;\r\n            cursor: pointer;\r\n            outline: none;\r\n            transition: background-color 0.3s, transform 0.2s;\r\n\r\n        }\r\n\r\n        .music-btn:hover {\r\n            background-color: plum;\r\n        }\r\n\r\n        .music-btn:active {\r\n            transform: scale(0.98);\r\n\r\n        }\r\n<<<<<<< HEAD\r\n\r\n        \r\n=======\r\n>>>>>>> origin/master\r\n    </style>\r\n\r\n\r\n\r\n</head>\r\n\r\n<body>\r\n\r\n    <div class=\"container\">\r\n        <table style=\"width: 1000px;\">\r\n            <tbody>\r\n                <tr style=\"height: 7.39062px;\">\r\n                    <td style=\"width: 896px; height: 7.39062px;\" colspan=\"3\">\r\n                        <h1 style=\"display: flex; justify-content: center; align-items: center; height: 200px;\"><img\r\n<<<<<<< HEAD\r\n                                style=\"max-height: 100%; max-width: 100%;\" src=\"images/banner.png\" alt=\"\" /></h1>\r\n                    </td>\r\n                </tr>\r\n                <tr style=\"height: 184px;\">\r\n                    <td style=\"width: 896px; height: 36px;\" colspan=\"5\">\r\n                        <h1 style=\"text-align: center;\">Weilin's MUSIC WORLD!</h1>\r\n=======\r\n                                style=\"max-height: 100%; max-width: 100%; \" src=\"images/banner.png\"\r\n                                alt=\"\" /></h1>\r\n                    </td>\r\n                </tr>\r\n              \r\n                <tr style=\"height: 184px;\">\r\n                    <td style=\"width: 896px; height: 36px;\" colspan=\"5\">\r\n                        <h1 style=\"text-align: center; \">Weilin's MUSIC WORLD!</h1>\r\n>>>>>>> origin/master\r\n                    </td>\r\n                </tr>\r\n                <tr style=\"height: 49px;\">\r\n                    <td style=\"width: 284.422px; text-align: center; height: 49px;\">\r\n                        <div class=\"assignment-cell\"><a href=\"index.html\"><span style=\"color: #000000;\">Music\r\n                                    History</span></a></div>\r\n                    </td>\r\n                    <td style=\"width: 340.578px; text-align: center; height: 49px;\">\r\n                        <div class=\"assignment-cell\"><a href=\"interaction.html\"><span\r\n                                    style=\"color: #000000;\">Music&nbsp;Interaction</span></a></div>\r\n                    </td>\r\n                    <td style=\"width: 271px; text-align: center; height: 49px;\">\r\n                        <div class=\"assignment-cell\"><a href=\"instrument.html\"><span style=\"color: #000000;\">Instrument\r\n                                    Introduce</span></a></div>\r\n                    </td>\r\n                </tr>\r\n<<<<<<< HEAD\r\n=======\r\n                \r\n            \r\n>>>>>>> origin/master\r\n                <tr style=\"height: 49px;\">\r\n                    <td style=\"width: 284.422px; height: 49px; text-align: center;\" colspan=\"3\">\r\n                        <p>To get started, check out the boxes below. Each one contains a small piece of music. Click a\r\n                            box to turn it on or off.</p>\r\n                        <p>For Example, you could try:</p>\r\n                        <p>4 2 6</p>\r\n                        <p>1 2 9</p>\r\n                        <p>7 2</p>\r\n                        <p>8 9</p>\r\n                        <p>4 5</p>\r\n                        <p>5 3</p>\r\n                    </td>\r\n                </tr>\r\n                <tr style=\"height: 49px;\">\r\n                    <td style=\"width: 284.422px; height: 49px; text-align: center;\">Drums</td>\r\n                    <td style=\"width: 340.578px; text-align: center; height: 49px;\">Bass</td>\r\n                    <td style=\"width: 271px; height: 49px; text-align: center;\">Melodies</td>\r\n                </tr>\r\n<<<<<<< HEAD\r\n                <tr>\r\n                    <td><button class=\"music-btn\">Play Drum 1 </button></td>\r\n                    <td><button class=\"music-btn\">Play Bass 2</button></td>\r\n                    <td><button class=\"music-btn\">Play Melody 3</button></td>\r\n                </tr>\r\n                <tr>\r\n                    <td><button class=\"music-btn\">Play Drum 4</button></td>\r\n                    <td><button class=\"music-btn\">Play Bass 5</button></td>\r\n                    <td><button class=\"music-btn\">Play Melody 6</button></td>\r\n                </tr>\r\n                <tr>\r\n                    <td><button class=\"music-btn\">Play Drum 7</button></td>\r\n                    <td><button class=\"music-btn\">Play Bass 8</button></td>\r\n                    <td><button class=\"music-btn\">Play Melody 9</button></td>\r\n                </tr>\r\n=======\r\n                \r\n                <tr>\r\n                    <td><button class=\"music-btn\" onclick=\"toggleMusic('audio1')\">Play Drum 1 </button></td>\r\n                    <td><button class=\"music-btn\" onclick=\"toggleMusic('audio2')\">Play Bass 2</button></td>\r\n                    <td><button class=\"music-btn\" onclick=\"toggleMusic('audio3')\">Play Melody 3</button></td>\r\n                </tr>\r\n                <tr>\r\n                    <td><button class=\"music-btn\" onclick=\"toggleMusic('audio4')\">Play Drum 4</button></td>\r\n                    <td><button class=\"music-btn\" onclick=\"toggleMusic('audio5')\">Play Bass 5</button></td>\r\n                    <td><button class=\"music-btn\" onclick=\"toggleMusic('audio6')\">Play Melody 6</button></td>\r\n                </tr>\r\n                <tr>\r\n                    <td><button class=\"music-btn\" onclick=\"toggleMusic('audio7')\">Play Drum 7</button></td>\r\n                    <td><button class=\"music-btn\" onclick=\"toggleMusic('audio8')\">Play Bass 8</button></td>\r\n                    <td><button class=\"music-btn\" onclick=\"toggleMusic('audio9')\">Play Melody 9</button></td>\r\n                </tr>\r\n\r\n>>>>>>> origin/master\r\n                <tr style=\"height: 49px;\">\r\n                    <td style=\"width: 284.422px; height: 49px;\">&nbsp;</td>\r\n                    <td style=\"width: 340.578px; height: 49px;\">&nbsp;</td>\r\n                    <td style=\"width: 271px; height: 49px;\">&nbsp;</td>\r\n                </tr>\r\n<<<<<<< HEAD\r\n=======\r\n\r\n>>>>>>> origin/master\r\n                <tr style=\"height: 49px;\">\r\n                    <td style=\"width: 284.422px; height: 49px;\">&nbsp;</td>\r\n                    <td style=\"width: 340.578px; height: 49px;\">&nbsp;</td>\r\n                    <td style=\"width: 271px; height: 49px;\">&nbsp;</td>\r\n                </tr>\r\n<<<<<<< HEAD\r\n                <tr style=\"height: 49px;\">\r\n                    <td style=\"width: 284.422px; height: 49px;\">&nbsp;</td>\r\n                    <td style=\"width: 340.578px; height: 49px;\">&nbsp;</td>\r\n                    <td style=\"width: 271px; height: 49px;\">&nbsp;</td>\r\n                </tr>\r\n                <tr style=\"height: 49px;\">\r\n                    <td style=\"width: 284.422px; height: 49px;\">&nbsp;</td>\r\n                    <td style=\"width: 340.578px; height: 49px;\" rowspan=\"5\">\r\n                        <h1 class=\"text-center\">Piano Play</h1>\r\n                        <div class=\"piano\">\r\n                            <div class=\"key white-key\" data-note=\"C\">C</div>\r\n                            <div class=\"key black-key\" data-note=\"C#\">C#</div>\r\n                            <div class=\"key white-key\" data-note=\"D\">D</div>\r\n                            <div class=\"key black-key\" data-note=\"D#\">D#</div>\r\n                            <div class=\"key white-key\" data-note=\"E\">E</div>\r\n                            <div class=\"key white-key\" data-note=\"F\">F</div>\r\n                            <div class=\"key black-key\" data-note=\"F#\">F#</div>\r\n                            <div class=\"key white-key\" data-note=\"G\">G</div>\r\n                            <div class=\"key black-key\" data-note=\"G#\">G#</div>\r\n                            <div class=\"key white-key\" data-note=\"A\">A</div>\r\n                            <div class=\"key black-key\" data-note=\"A#\">A#</div>\r\n                            <div class=\"key white-key\" data-note=\"B\">B</div>\r\n                        </div>\r\n                        <p class=\"instruction\"><b>Instruction</b> : Press on any key to listen to the note sound.</p>\r\n\r\n                        <button id=\"playButton\" class=\"btn btn-primary\">Play Happy Birthday</button>\r\n                        <button id=\"stopButton\" class=\"btn btn-secondary\">Stop</button>\r\n                        <div id=\"noteName\"></div>\r\n                        <div id=\"noteCounter\"></div>\r\n                        <div id=\"tuneButtons\">\r\n                            <button class=\"btn btn-secondary\" data-tune=\"twinkle\">Play Twinkle Twinkle</button>\r\n                            <button class=\"btn btn-secondary\" data-tune=\"star\">Play Star Wars</button>\r\n                            <button class=\"btn btn-secondary\" data-tune=\"odejoy\">Play Ode to Joy</button>\r\n                            <button class=\"btn btn-secondary\" data-tune=\"einekleine\">Play Eine kleine\r\n                                Nachtmusik</button>\r\n                            <button class=\"btn btn-secondary\" data-tune=\"danube\">Play Blue Danube Waltz</button>\r\n                            <button class=\"btn btn-secondary\" data-tune=\"traviata\">Play La Traviata</button>\r\n                            <button class=\"btn btn-secondary\" data-tune=\"valkyries\">Play Ride of the Valkyries</button>\r\n                            <button class=\"btn btn-secondary\" data-tune=\"cancan\">Play Can-Can</button>\r\n                            <button class=\"btn btn-secondary\" data-tune=\"furElise\">Play Für Elise</button>\r\n                            <button class=\"btn btn-secondary\" data-tune=\"allaTurca\">Play Alla Turca</button>\r\n                        </div>\r\n                        <p>&nbsp;</p>\r\n                    </td>\r\n                    <td style=\"width: 271px; height: 49px;\">&nbsp;</td>\r\n                </tr>\r\n                <tr style=\"height: 49px;\">\r\n                    <td style=\"width: 284.422px; height: 49px;\">&nbsp;</td>\r\n                    <td style=\"width: 271px; height: 49px;\">&nbsp;</td>\r\n                </tr>\r\n                <tr style=\"height: 49px;\">\r\n                    <td style=\"width: 284.422px; height: 49px;\">&nbsp;</td>\r\n                    <td style=\"width: 271px; height: 49px;\">&nbsp;</td>\r\n                </tr>\r\n                <tr style=\"height: 49px;\">\r\n                    <td style=\"width: 284.422px; height: 49px;\">&nbsp;</td>\r\n                    <td style=\"width: 271px; height: 49px;\">&nbsp;</td>\r\n                </tr>\r\n                <tr style=\"height: 49px;\">\r\n                    <td style=\"width: 284.422px; height: 49px;\">&nbsp;</td>\r\n                    <td style=\"width: 271px; height: 49px;\">&nbsp;</td>\r\n                </tr>\r\n                <tr style=\"height: 49px;\">\r\n                    <td style=\"width: 284.422px; height: 49px;\">&nbsp;</td>\r\n                    <td style=\"width: 340.578px; height: 49px;\">&nbsp;</td>\r\n                    <td style=\"width: 271px; height: 49px;\">&nbsp;</td>\r\n                </tr>\r\n            </tbody>\r\n        </table>\r\n\r\n\r\n\r\n        </table>\r\n=======\r\n        \r\n                </tbody>\r\n\r\n\r\n\r\n       \r\n>>>>>>> origin/master\r\n        <audio id=\"audio1\" src=\"music/d1.wav\"></audio>\r\n        <audio id=\"audio2\" src=\"music/b1.mp3\"></audio>\r\n        <audio id=\"audio3\" src=\"music/m1.wav\"></audio>\r\n        <audio id=\"audio4\" src=\"music/d2.wav\"></audio>\r\n        <audio id=\"audio5\" src=\"music/b2.wav\"></audio>\r\n        <audio id=\"audio6\" src=\"music/m2.wav\"></audio>\r\n        <audio id=\"audio7\" src=\"music/d3.mp3\"></audio>\r\n        <audio id=\"audio8\" src=\"music/b3.wav\"></audio>\r\n        <audio id=\"audio9\" src=\"music/m3.wav\"></audio>\r\n    </div>\r\n\r\n\r\n    <script src=\"interaction1.js\"></script>\r\n<<<<<<< HEAD\r\n    <script src=\"piano.js\"></script>\r\n=======\r\n>>>>>>> origin/master\r\n\r\n\r\n</body>\r\n\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/interaction.html b/interaction.html
+--- a/interaction.html	
++++ b/interaction.html	
+@@ -5,10 +5,7 @@
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Music Interaction</title>
+-<<<<<<< HEAD
+     <link rel="stylesheet" type="text/css" href="piano.css">
+-=======
+->>>>>>> origin/master
+ 
+     <style>
+         body {
+@@ -47,6 +44,8 @@
+             position: relative;
+         }
+ 
++
++
+         .progress-bar .progress {
+             height: 100%;
+             background-color: #4CAF50;
+@@ -102,24 +101,18 @@
+         table {
+             width: 100%;
+             table-layout: flex;
+-<<<<<<< HEAD
++
+ 
+             border-collapse: collapse;
+ 
+-=======
+            
+             border-collapse: collapse;
+            
+->>>>>>> origin/master
+         }
+ 
+         td {
+             text-align: center;
+-<<<<<<< HEAD
+ 
+-=======
+-    
+->>>>>>> origin/master
+             vertical-align: middle;
+ 
+             padding: 10px;
+@@ -146,12 +139,8 @@
+         .music-btn:active {
+             transform: scale(0.98);
+ 
+-        }
+-<<<<<<< HEAD
++        }   
+ 
+-        
+-=======
+->>>>>>> origin/master
+     </style>
+ 
+ 
+@@ -166,14 +155,13 @@
+                 <tr style="height: 7.39062px;">
+                     <td style="width: 896px; height: 7.39062px;" colspan="3">
+                         <h1 style="display: flex; justify-content: center; align-items: center; height: 200px;"><img
+-<<<<<<< HEAD
++
+                                 style="max-height: 100%; max-width: 100%;" src="images/banner.png" alt="" /></h1>
+                     </td>
+                 </tr>
+                 <tr style="height: 184px;">
+                     <td style="width: 896px; height: 36px;" colspan="5">
+                         <h1 style="text-align: center;">Weilin's MUSIC WORLD!</h1>
+-=======
+                                 style="max-height: 100%; max-width: 100%; " src="images/banner.png"
+                                 alt="" /></h1>
+                     </td>
+@@ -182,7 +170,6 @@
+                 <tr style="height: 184px;">
+                     <td style="width: 896px; height: 36px;" colspan="5">
+                         <h1 style="text-align: center; ">Weilin's MUSIC WORLD!</h1>
+->>>>>>> origin/master
+                     </td>
+                 </tr>
+                 <tr style="height: 49px;">
+@@ -199,11 +186,8 @@
+                                     Introduce</span></a></div>
+                     </td>
+                 </tr>
+-<<<<<<< HEAD
+-=======
+-                
+-            
+->>>>>>> origin/master
++
++
+                 <tr style="height: 49px;">
+                     <td style="width: 284.422px; height: 49px; text-align: center;" colspan="3">
+                         <p>To get started, check out the boxes below. Each one contains a small piece of music. Click a
+@@ -222,7 +206,7 @@
+                     <td style="width: 340.578px; text-align: center; height: 49px;">Bass</td>
+                     <td style="width: 271px; height: 49px; text-align: center;">Melodies</td>
+                 </tr>
+-<<<<<<< HEAD
++
+                 <tr>
+                     <td><button class="music-btn">Play Drum 1 </button></td>
+                     <td><button class="music-btn">Play Bass 2</button></td>
+@@ -238,7 +222,7 @@
+                     <td><button class="music-btn">Play Bass 8</button></td>
+                     <td><button class="music-btn">Play Melody 9</button></td>
+                 </tr>
+-=======
++
+                 
+                 <tr>
+                     <td><button class="music-btn" onclick="toggleMusic('audio1')">Play Drum 1 </button></td>
+@@ -256,22 +240,17 @@
+                     <td><button class="music-btn" onclick="toggleMusic('audio9')">Play Melody 9</button></td>
+                 </tr>
+ 
+->>>>>>> origin/master
+                 <tr style="height: 49px;">
+                     <td style="width: 284.422px; height: 49px;">&nbsp;</td>
+                     <td style="width: 340.578px; height: 49px;">&nbsp;</td>
+                     <td style="width: 271px; height: 49px;">&nbsp;</td>
+                 </tr>
+-<<<<<<< HEAD
+-=======
+ 
+->>>>>>> origin/master
+                 <tr style="height: 49px;">
+                     <td style="width: 284.422px; height: 49px;">&nbsp;</td>
+                     <td style="width: 340.578px; height: 49px;">&nbsp;</td>
+                     <td style="width: 271px; height: 49px;">&nbsp;</td>
+                 </tr>
+-<<<<<<< HEAD
+                 <tr style="height: 49px;">
+                     <td style="width: 284.422px; height: 49px;">&nbsp;</td>
+                     <td style="width: 340.578px; height: 49px;">&nbsp;</td>
+@@ -345,14 +324,14 @@
+ 
+ 
+         </table>
+-=======
++
+         
+                 </tbody>
+ 
+ 
+ 
+        
+->>>>>>> origin/master
++
+         <audio id="audio1" src="music/d1.wav"></audio>
+         <audio id="audio2" src="music/b1.mp3"></audio>
+         <audio id="audio3" src="music/m1.wav"></audio>
+@@ -366,10 +345,9 @@
+ 
+ 
+     <script src="interaction1.js"></script>
+-<<<<<<< HEAD
++
+     <script src="piano.js"></script>
+-=======
+->>>>>>> origin/master
++
+ 
+ 
+ </body>

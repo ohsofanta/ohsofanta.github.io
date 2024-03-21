@@ -1,0 +1,63 @@
+.piano {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.key {
+    width: 40px;
+    height: 200px;
+    border: 1px solid #000;
+    cursor: pointer;
+    margin: 0 2px;
+    transition: background-color 0.2s;
+}
+
+.white-key {
+    background-color: #dfccfb;
+}
+
+.black-key {
+    width: 30px;
+    height: 120px;
+    background-color: #beadfa;
+    position: relative;
+    z-index: 1;
+    margin: 0 -15px;
+}
+
+.key.active {
+    background-color: #d0bfff;
+}
+
+.instruction {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+#playButton {
+    margin-top: 20px;
+}
+
+#stopButton {
+    margin-top: 10px;
+}
+
+#noteName {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#noteCounter {
+    margin-top: 10px;
+}
+
+#tuneButtons {
+    margin-top: 20px;
+}
+
+.key.highlight {
+    background-color: pink;
+    transition: background-color 0.5s; 
+}
