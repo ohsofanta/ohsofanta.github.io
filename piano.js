@@ -21,7 +21,8 @@ const notes = {
     'G#': 415.30,
     'A': 440.00,
     'A#': 466.16,
-    'B': 493.88
+    'B': 493.88,
+    "CH":523.25
 };
 
 const noteCounters = {};
@@ -73,20 +74,51 @@ function playSound(note) {
     }, 500);
 }
 
-function playTune(tune) {
+function playTune(tune, overallDuration = 10000) {
     const tuneNotes = tunes[tune];
     let delay = 0;
+    let fullNoteCount = 0;
 
-    tuneNotes.forEach(note => {
+    const rhythmPattern = [1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1];
+    const breakDuration = 500; // Duration of the break after every two full notes
+
+    const scale = overallDuration / (rhythmPattern.length * 250); // Calculate the duration scale factor
+
+    tuneNotes.forEach((note, index) => {
+        let duration = 250 * scale; // Scale the default duration based on the overall duration
+
+        switch (rhythmPattern[index]) {
+            case 1:
+                duration = 250 * scale; // Quarter note duration
+                break;
+            case 2:
+                duration = 500 * scale; // Half note duration
+                break;
+            case 4:
+                duration = 1000 * scale; // Full note duration
+
+                fullNoteCount++;
+
+                if (fullNoteCount % 2 === 0) {
+                    // Add a break after every two full notes
+                    setTimeout(() => {
+                        // Play a break
+                        noteNameDisplay.textContent = "Break";
+                    }, delay);
+                    delay += breakDuration * scale;
+                }
+                break;
+        }
+
         const timeout = setTimeout(() => {
             playSound(note);
             noteNameDisplay.textContent = `Note: ${note}`;
         }, delay);
+
         currentTuneTimeouts.push(timeout);
-        delay += 500;
+        delay += duration;
     });
 }
-
 function stopTune() {
     currentTuneTimeouts.forEach(timeout => clearTimeout(timeout));
     currentTuneTimeouts = [];
@@ -95,7 +127,7 @@ function stopTune() {
 playButton.addEventListener('click', () => playTune('happyBirthday'));
 
 const tunes = {
-    'happyBirthday': ['C', 'C', 'D', 'C', 'F', 'E', 'C', 'C', 'D', 'C', 'G', 'F', 'C', 'C', 'C', 'A', 'F', 'E', 'D', 'B', 'B', 'A', 'F', 'G', 'F'],
+    'happyBirthday': ['C', 'C', 'D', 'C', 'F', 'E'," ",'C','C', 'D', 'C', 'G', 'F',"",'C', 'C', 'C', 'A', 'F', 'E',"", 'D', "CH", "CH", 'B', 'G', 'A', 'G'],
     'twinkle': ['C', 'C', 'G', 'G', 'A', 'A', 'G', 'F', 'F', 'E', 'E', 'D', 'D', 'C', 'G', 'G', 'F', 'F', 'E', 'E', 'D', 'G', 'G', 'F', 'F', 'E', 'E', 'D', 'C', 'C', 'G', 'G', 'A', 'A', 'G', 'F', 'F', 'E', 'E', 'D', 'D', 'C'],
     'star': ['E', 'E', 'F', 'G', 'G', 'F', 'E', 'D', 'C', 'C', 'D', 'E', 'E', 'D', 'D', 'E', 'E', 'F', 'G', 'G', 'F', 'E', 'D', 'C', 'C', 'D', 'E', 'E', 'D', 'D', 'E', 'D', 'C', 'C', 'E', 'E', 'F', 'G', 'G', 'F', 'E', 'D', 'C', 'C', 'D', 'E', 'E', 'D', 'D', 'E'],
     'odejoy': ['E', 'E', 'F', 'G', 'G', 'F', 'E', 'D', 'C', 'C', 'D', 'E', 'E', 'D', 'D', 'E', 'E', 'F', 'G', 'G', 'F', 'E', 'D', 'C', 'C', 'D', 'E', 'D', 'C', 'D', 'E', 'F', 'F', 'E', 'F', 'G', 'E', 'F', 'G', 'G', 'F', 'E', 'D', 'C', 'C', 'D', 'E', 'E', 'D', 'D', 'E'],
